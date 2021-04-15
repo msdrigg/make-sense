@@ -165,26 +165,12 @@ class LabelInputField extends React.Component<IProps, IState> {
                     <div className="Marker"/>
                     <div className="Content">
                         <div className="ContentWrapper">
-                            <div className="DropdownLabel"
+                            <div className="InputText"
                                  ref={ref => this.dropdownLabel = ref}
-                                 onClick={this.openDropdown}
+                                 onChange{this.
                             >
                                 {value ? value.name : "Select label"}
                             </div>
-                            {this.state.isOpen && <div
-                                className="Dropdown"
-                                style={this.getDropdownStyle()}
-                                ref={ref => this.dropdown = ref}
-                            >
-                                <Scrollbars
-                                    renderTrackHorizontal={props => <div {...props} className="track-horizontal"/>}
-                                >
-                                    <div>
-                                        {this.getDropdownOptions()}
-                                    </div>
-                                </Scrollbars>
-
-                            </div>}
                         </div>
                         <div className="ContentWrapper">
                             <ImageButton
